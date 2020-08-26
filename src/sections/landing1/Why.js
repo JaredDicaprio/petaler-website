@@ -35,14 +35,14 @@ const WhyContent = () => (
                 <div className="omga-02__content-text section-title order-lg-1">
                   <Title>Why does it matter?</Title>
                   <Text mb={4}>
-                    About 70% of the cut flowers purchased in the United States
-                    are grown overseas.
+                    Approximately 70% of the cut flowers purchased in the United
+                    States are grown overseas.
                   </Text>
                   <Text mb={4}>
                     However, more consumers want to enjoy flowers grown closer
-                    to home 🏠 - both to support businesses they care about and
-                    minimize their environmental impact ✈️ (and because they are
-                    prettier! 😍).
+                    to home <span role="img">🏠</span> - both to support
+                    businesses they care about and minimize their environmental
+                    impact ✈️ (and because they are prettier! 😍).
                   </Text>
                   <Text mb={4}>
                     Strenthening 💪 connections between local flower-farmers and
