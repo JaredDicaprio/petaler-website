@@ -33,7 +33,7 @@ const ShapeCard = styled(Box)`
 `;
 
 const ContentCard = ({
-  color = "primary",
+  color = "secondary",
   className,
   iconName,
   title,
@@ -102,7 +102,7 @@ const Content2 = () => (
                 <img src={imgContentMobile} alt="" className="img-fluid" />
               </div>
               <ShapeCard
-                bg="primary"
+                bg="secondary"
                 p="18px"
                 borderRadius={8}
                 className="d-flex align-items-start"
@@ -116,7 +116,7 @@ const Content2 = () => (
                   minWidth="30px"
                   height="30px"
                   minHeight="30px"
-                  bg="secondary"
+                  bg="warning"
                   color="light"
                   borderRadius="50%"
                   className="d-flex align-items-center justify-content-center"
@@ -127,17 +127,8 @@ const Content2 = () => (
                 </Box>
 
                 <Box pr="40px">
-                  <Text
-                    color="light"
-                    lineHeight="24px"
-                    fontSize={1}
-                    opacity={0.7}
-                    mb={0}
-                  >
-                    Deadline: Oct 29, 2020
-                  </Text>
                   <Title variant="card" color="light" fontWeight={300} mb={0}>
-                    You’ve got a new project from David!
+                    Summer Meadows Farm has posted new inventory!
                   </Title>
                 </Box>
               </ShapeCard>

@@ -61,15 +61,12 @@ const Content1 = () => (
                   mr={3}
                   mt={2}
                 >
-                  <i className="fas fa-bell"></i>
+                  <i className="fas fa-check"></i>
                 </Box>
 
                 <Box pr="40px">
-                  <Text fontSize={1} lineHeight="24px" opacity={0.7} mb={0}>
-                    Deliveries today from 12-2
-                  </Text>
                   <Title variant="card" fontWeight={300} mb={0}>
-                    Project Discussion with John
+                    Payment recieved for Order #1426
                   </Title>
                 </Box>
               </ShapeCard>
