@@ -3,10 +3,11 @@ import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import GlobalContext from "../../context/GlobalContext";
 import Offcanvas from "../Offcanvas";
-import { Button } from "../Core";
+import { Button, Title } from "../Core";
 import NestedMenu from "../NestedMenu";
 import { device } from "../../utils";
 import Logo from "../Logo";
@@ -218,7 +219,7 @@ const Header = ({ isDark = false }) => {
           <nav className="navbar site-navbar offcanvas-active navbar-expand-lg navbar-light">
             {/* <!-- Brand Logo--> */}
             <div className="brand-logo">
-              <Logo white={isDark} />
+              <Title variant="logo">Petaler</Title>
             </div>
             <div className="collapse navbar-collapse">
               <div className="navbar-nav ml-lg-auto mr-3">
@@ -228,7 +229,7 @@ const Header = ({ isDark = false }) => {
                 >
                   {menuItems.map(
                     (
-                      { label, isExternal = false, name, items, ...rest },
+                      { label, isExternal = false, name, to, items, ...rest },
                       index
                     ) => {
                       const hasSubItems = Array.isArray(items);
@@ -337,14 +338,14 @@ const Header = ({ isDark = false }) => {
                                   {label}
                                 </a>
                               ) : (
-                                <Link
+                                <AnchorLink
                                   className="nav-link"
-                                  to={`/${name}`}
+                                  to={`${to}`}
                                   role="button"
                                   aria-expanded="false"
                                 >
                                   {label}
-                                </Link>
+                                </AnchorLink>
                               )}
                             </li>
                           )}
@@ -354,18 +355,6 @@ const Header = ({ isDark = false }) => {
                   )}
                 </Menu>
               </div>
-            </div>
-            <div className="header-btns ml-auto ml-lg-0">
-              <Button
-                size="sm"
-                css={`
-                  font-size: 16px !important;
-                  min-width: 141px !important;
-                  height: 45px !important;
-                `}
-              >
-                Sign Up
-              </Button>
             </div>
             <ToggleButton
               className={`navbar-toggler btn-close-off-canvas ml-3 ${

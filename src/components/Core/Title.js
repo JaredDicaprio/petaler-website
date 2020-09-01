@@ -3,6 +3,30 @@ import styled from "styled-components";
 import { color, space, typography, shadow } from "styled-system";
 import { device } from "../../utils";
 
+const LogoTitle = styled.h4`
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  font-size: 32px;
+  line-height: 45px;
+  margin-bottom: 0px;
+
+  @media ${device.sm} {
+    font-size: 50px;
+    line-height: 62px;
+  }
+
+  @media ${device.lg} {
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 0px;
+  }
+
+  ${color};
+  ${space};
+  ${typography};
+  ${shadow};
+`;
+
 const SectionTitle = styled.h2`
   font-weight: 700;
   letter-spacing: -2.5px;
@@ -69,6 +93,9 @@ const Title = ({ variant, ...rest }) => {
       break;
     case "hero":
       TitleStyled = HeroTitle;
+      break;
+    case "logo":
+      TitleStyled = LogoTitle;
       break;
     default:
       TitleStyled = SectionTitle;

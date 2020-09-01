@@ -4,13 +4,13 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
-import imgContentMobile from "../../assets/image/png/content-img1--mobile.webp";
+import farmImg from "../../assets/image/png/farm_mobile.png";
 
 const ShapeCard = styled(Box)`
   width: 305px;
   box-shadow: 0 32px 34px rgba(28, 27, 32, 0.2);
   position: absolute;
-  top: 52%;
+  top: 20%;
   left: 0%;
   transform: scale(0.85);
   @media ${device.sm} {
@@ -25,7 +25,7 @@ const ShapeCard = styled(Box)`
 const Content1 = () => (
   <>
     {/* <!-- Content section 1 --> */}
-    <Section>
+    <Section id="farmers">
       <Container>
         <Row className="align-items-center">
           <Col md="12" lg="6" className="order-lg-2">
@@ -36,7 +36,7 @@ const Content1 = () => (
                 data-aos-duration="750"
                 data-aos-once="true"
               >
-                <img src={imgContentMobile} alt="" className="img-fluid" />
+                <img src={farmImg} alt="" className="img-fluid" />
               </div>
 
               <ShapeCard

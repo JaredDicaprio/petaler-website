@@ -7,7 +7,7 @@ import { Title, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
 import svgCurve from "../../assets/image/svg/l1-curve-content2.svg";
-import imgContentMobile from "../../assets/image/png/content-img2--mobile.webp";
+import floristImg from "../../assets/image/png/florist_mobile.png";
 
 const ShapeTop = styled(Box)`
   position: absolute;
@@ -86,7 +86,7 @@ const ContentCard = ({
 const Content2 = () => (
   <>
     {/* <!-- Content section 2 --> */}
-    <Section bg="#f7f7fb" className="position-relative">
+    <Section bg="#f7f7fb" className="position-relative" id="florists">
       <ShapeTop>
         <img src={svgCurve} alt="" className="img-fluid" />
       </ShapeTop>
@@ -99,7 +99,7 @@ const Content2 = () => (
                 data-aos-duration="750"
                 data-aos-once="true"
               >
-                <img src={imgContentMobile} alt="" className="img-fluid" />
+                <img src={floristImg} alt="" className="img-fluid" />
               </div>
               <ShapeCard
                 bg="secondary"

@@ -91,29 +91,6 @@ const Layout = ({ children, pageContext }) => {
   // Navbar style based on scroll
   const eleRef = useRef();
 
-  useEffect(() => {
-    window.addEventListener(
-      "popstate",
-      function(event) {
-        // The popstate event is fired each time when the current history entry changes.
-        gContext.closeAbout();
-        gContext.closeContact();
-        gContext.closeOffcanvas();
-      },
-      false
-    );
-    window.addEventListener(
-      "pushState",
-      function(event) {
-        // The pushstate event is fired each time when the current history entry changes.
-        gContext.closeAbout();
-        gContext.closeContact();
-        gContext.closeOffcanvas();
-      },
-      false
-    );
-  }, [gContext]);
-
   if (pageContext.layout === "bare") {
     return (
       <ThemeProvider

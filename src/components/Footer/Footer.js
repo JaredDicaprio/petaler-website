@@ -5,10 +5,10 @@ import { Title, Box } from "../Core";
 import Logo from "../Logo";
 
 const TitleStyled = styled(Title)`
-  font-size: 16px;
+  font-size: 32px;
   font-weight: 700;
   letter-spacing: -0.5px;
-  margin-bottom: 22px;
+  color: white;
 `;
 
 const UlStyled = styled.ul`
@@ -70,17 +70,11 @@ const Footer = ({ isDark = true }) => {
       {/* <!-- Footer section --> */}
       <Box bg={isDark ? "#8694cf" : "light"}>
         <Container>
-          <Box
-            css={`
-              padding: 80px 0 60px;
-            `}
-          >
-            <Row className="justify-content-center">
-              <Col lg="2" md="4">
-                <Logo white={isDark} />
-              </Col>
-            </Row>
-          </Box>
+          <Row className="justify-content-center">
+            <Col lg="2" md="4">
+              <TitleStyled>Petaler</TitleStyled>
+            </Col>
+          </Row>
           <CopyRightArea dark={isDark ? 1 : 0}>
             <Row className="align-items-center">
               <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">

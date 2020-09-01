@@ -100,7 +100,7 @@ const ButtonStyled = styled(Button)`
 const Pricing = () => {
   return (
     <>
-      <Section className="pb-0">
+      <Section className="pb-0" id="pricing">
         <Container>
           <Row className="justify-content-center">
             <div className="">
