@@ -78,7 +78,7 @@ const Footer = ({ isDark = true }) => {
           <CopyRightArea dark={isDark ? 1 : 0}>
             <Row className="align-items-center">
               <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
-                <p>&copy; 2020 Petaler, All Rights Reserved</p>
+                <p>&copy; 2020 Petaler, All Rights Reserved. Female Powered.</p>
               </Col>
             </Row>
           </CopyRightArea>

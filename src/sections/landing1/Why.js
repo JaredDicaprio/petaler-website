@@ -45,10 +45,10 @@ const WhyContent = () => (
                     impact ✈️ (and because they are prettier! 😍).
                   </Text>
                   <Text mb={4}>
-                    Strenthening 💪 connections between local flower-farmers and
-                    florists, and increasing the accessibility to fresh blooms
-                    matters because it encourages stronger communities through
-                    the shared joy of flowers. 💐
+                    Strengthening 💪 connections between local flower-farmers
+                    and florists, and increasing the accessibility to fresh
+                    blooms matters because it encourages stronger communities
+                    through the shared joy of flowers. 💐
                   </Text>
                 </div>
               </Section>

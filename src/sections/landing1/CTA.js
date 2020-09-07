@@ -28,17 +28,17 @@ const RightCard = styled(Box)`
 `;
 
 const CTA = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { isSubmitting },
-    reset,
-    setError,
-  } = useForm();
   const [submitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const GATEWAY_URL =
     "https://74xvrjcu1j.execute-api.us-east-1.amazonaws.com/prod";
-  const onSubmit = async (data) => {
+  const onSubmit = async () => {
+    const data = {
+      name,
+      email,
+    };
+
     try {
       console.log("data", data);
       await fetch(GATEWAY_URL, {
@@ -50,14 +50,8 @@ const CTA = () => {
           "Content-type": "application/json; charset=UTF-8",
         },
       });
-      reset();
       setSubmitted(true);
     } catch (error) {
-      setError(
-        "submit",
-        "submitError",
-        `Uh oh - something went wrong :( ${error.message}`
-      );
       console.log("err", error);
     }
   };
@@ -68,13 +62,12 @@ const CTA = () => {
     <form method="post">
       <Box mb={3}>
         <Input
-          onSubmit={handleSubmit(onSubmit)}
           type="text"
           placeholder="Your name"
           name="name"
           id="name"
-          ref={register}
-          disabled={isSubmitting}
+          value={name}
+          onChange={(event) => setName(event.target.value)}
         />
       </Box>
       <Box mb={3}>
@@ -83,17 +76,11 @@ const CTA = () => {
           placeholder="Your email"
           name="email"
           id="email"
-          ref={register}
-          disabled={isSubmitting}
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
         />
       </Box>
-
-      <Button
-        width="100%"
-        type="submit"
-        borderRadius={10}
-        disabled={isSubmitting}
-      >
+      <Button width="100%" type="submit" borderRadius={10} onClick={onSubmit}>
         Keep me in the loop
       </Button>
     </form>
